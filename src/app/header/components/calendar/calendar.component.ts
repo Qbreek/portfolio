@@ -16,6 +16,7 @@ export class CalendarComponent implements OnInit {
       this.date.getDay() + 1
     );
   public showDropdown = true;
+  panelOpenState = false;
 
   constructor(private onThisDayEventService: OnThisDayEventService) {}
 

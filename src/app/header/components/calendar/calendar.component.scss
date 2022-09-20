@@ -1,39 +1,67 @@
 $yaru-dark-gray: #2c2c2c;
 $yaru-light-gray: #49474785;
 
-button {
-  font-size: 1em;
-  background-color: inherit;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  overflow: scroll;
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
-  border: 1px solid black;
-  background-color: $yaru-dark-gray;
-  position: absolute;
-  top: 3em;
-}
-
-span {
-  display: block;
-
-  border-radius: 5px;
-  background-color: $yaru-light-gray;
-  width: 90%;
-}
-
 .wrapper {
   display: flex;
   justify-content: center;
-  gap: 1em;
+
+  .date-button {
+    font-size: 1em;
+    background-color: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .left-items {
+    height: 100%;
+    width: 50%;
+  }
+
+  .right-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    mat-card {
+      background-color: $yaru-light-gray;
+      color: white;
+    }
+
+    mat-calendar {
+      color: white;
+    }
+  }
+
+  menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0 0;
+    width: 40%;
+    height: 30%;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: $yaru-dark-gray;
+    position: absolute;
+    top: 2em;
+
+    li {
+      list-style: none;
+      white-space: pre-wrap;
+      border-radius: 5px;
+      background-color: $yaru-light-gray;
+      width: 90%;
+    }
+  }
+
+  mat-panel-title {
+    color: white;
+  }
+
+  mat-expansion-panel {
+    background-color: $yaru-light-gray;
+    color: white;
+  }
 }
