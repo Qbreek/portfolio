@@ -1,0 +1,13 @@
+.application-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 10fr auto;
+}
+
+main {
+  background-image: url("../../../../assets/images/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
