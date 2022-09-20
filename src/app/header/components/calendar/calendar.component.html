@@ -1,1 +1,10 @@
-<p>{{ date | date: "medium" }}</p>
+<div class="wrapper">
+  <button (click)="showDropdown = !showDropdown">
+    {{ date | date: "medium" | removeComma }}
+  </button>
+  <section *ngIf="showDropdown">
+    <div *ngFor="let item of list$ | async">
+      {{ item.description }}
+    </div>
+  </section>
+</div>

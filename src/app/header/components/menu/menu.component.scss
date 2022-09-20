@@ -1,0 +1,22 @@
+$yaru-dark-gray: #2c2c2c;
+
+.wrapper {
+  display: flex;
+}
+
+::ng-deep .yaru-dark-menu {
+  border: 1px solid black;
+  background-color: $yaru-dark-gray;
+
+  button {
+    color: white;
+    background-color: $yaru-dark-gray;
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: $yaru-dark-gray;
+  color: white;
+  border: none;
+}
