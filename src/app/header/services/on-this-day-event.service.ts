@@ -12,7 +12,9 @@ export class OnThisDayEventService {
   public fetchEvent(currentMonth: number, currentDay: number) {
     return this.http
       .get<EventsResponse>(
-        `https://byabbe.se/on-this-day/${currentMonth}/${currentDay}/events.json`
+        `https://byabbe.se/on-this-day/${currentMonth + 1}/${
+          currentDay + 1
+        }/events.json`
       )
       .pipe(
         map((res) => {

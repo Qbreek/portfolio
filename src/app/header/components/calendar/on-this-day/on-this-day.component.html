@@ -1,0 +1,17 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>On this day</span>
+        <mat-icon>history_edu</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ul class="events-wrapper">
+      <li *ngFor="let event of eventList$ | async">
+        <a href="{{ event.wikipedia[0].wikipedia }}" target="_blank">
+          {{ event.description }}
+        </a>
+      </li>
+    </ul>
+  </mat-expansion-panel>
+</mat-accordion>

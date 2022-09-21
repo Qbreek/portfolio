@@ -1,0 +1,19 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>Music</span>
+        <mat-icon>music_note</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="player-wrapper">
+      <button mat-mini-fab (click)="playAudio()">
+        <mat-icon>play_circle</mat-icon>
+      </button>
+      <button mat-mini-fab (click)="pauseAudio()">
+        <mat-icon>stop_circle</mat-icon>
+      </button>
+      <form></form>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

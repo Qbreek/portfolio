@@ -5,58 +5,30 @@ $yaru-light-gray: #49474785;
   display: flex;
   justify-content: center;
 
-  .date-button {
-    font-size: 1em;
+  button {
     background-color: inherit;
-    color: white;
     border: none;
+    color: white;
+    font-size: 1em;
     cursor: pointer;
-  }
-
-  .left-items {
-    height: 100%;
-    width: 50%;
-  }
-
-  .right-items {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    mat-card {
-      background-color: $yaru-light-gray;
-      color: white;
-    }
-
-    mat-calendar {
-      color: white;
-    }
   }
 
   menu {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 1em;
-    padding: 0 0;
-    width: 40%;
-    height: 30%;
+    padding: 1em 1em;
+    width: 30%;
     border-radius: 5px;
     border: 1px solid black;
     background-color: $yaru-dark-gray;
     position: absolute;
     top: 2em;
-
-    li {
-      list-style: none;
-      white-space: pre-wrap;
-      border-radius: 5px;
-      background-color: $yaru-light-gray;
-      width: 90%;
-    }
   }
 
   mat-panel-title {
+    display: flex;
+    justify-content: space-between;
     color: white;
   }
 

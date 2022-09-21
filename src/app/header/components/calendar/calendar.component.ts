@@ -1,26 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { SingleEvent } from '../../models/single-event.model';
-import { OnThisDayEventService } from '../../services/on-this-day-event.service';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class CalendarComponent implements OnInit {
+export class CalendarComponent {
   public date = new Date();
-  public list$: Observable<SingleEvent[]> =
-    this.onThisDayEventService.fetchEvent(
-      this.date.getMonth() + 1,
-      this.date.getDay() + 1
-    );
-  public showDropdown = true;
-  panelOpenState = false;
+  public showPanel = true;
+  public songs = new FormGroup({
+    song: new FormControl(null),
+  });
 
-  constructor(private onThisDayEventService: OnThisDayEventService) {}
-
-  ngOnInit(): void {
-    setInterval(() => (this.date = new Date()));
+  public togglePanel() {
+    this.showPanel = !this.showPanel;
   }
 }
